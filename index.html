@@ -112,7 +112,7 @@
                 <h2>Lua pour FiveM</h2>
                 <div class="content-wrapper">
                     <div class="text-content">
-                        <h3>Qu'est-ce que FiveM?</h3>
+i                        <h3>Qu'est-ce que FiveM?</h3>
                         <p>FiveM est une plateforme de modification pour GTA V qui permet aux joueurs de rejoindre des serveurs personnalisés avec des scripts Lua. Cette plateforme offre aux développeurs la possibilité de créer des expériences uniques en utilisant les ressources du jeu.</p>
                         
                         <h3>Introduction à Lua</h3>
@@ -458,314 +458,583 @@ end)
                 </div>
             </div>
         </section>
+<!-- ... existing code ... -->
+<section id="javascript" class="language-section">
+    <div class="container">
+        <h2>JavaScript</h2>
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h3>Le langage du web</h3>
+                <p>JavaScript est un langage de programmation polyvalent qui permet d'ajouter des fonctionnalités interactives aux sites web. C'est l'un des trois piliers du développement web moderne, aux côtés de HTML et CSS.</p>
+                
+                <h3>Fondamentaux de JavaScript</h3>
+                
+                <h4>1. Variables et Types de Données</h4>
+                <p>JavaScript propose plusieurs façons de déclarer des variables:</p>
+                <ul>
+                    <li><strong>var</strong>: Déclaration de variable avec portée de fonction</li>
+                    <li><strong>let</strong>: Déclaration de variable avec portée de bloc</li>
+                    <li><strong>const</strong>: Constante avec portée de bloc</li>
+                </ul>
+                <p>Les types de données principaux sont:</p>
+                <ul>
+                    <li><strong>String</strong>: Chaînes de caractères</li>
+                    <li><strong>Number</strong>: Nombres (entiers et décimaux)</li>
+                    <li><strong>Boolean</strong>: true ou false</li>
+                    <li><strong>Object</strong>: Collections de paires clé-valeur</li>
+                    <li><strong>Array</strong>: Collections ordonnées de valeurs</li>
+                    <li><strong>null</strong>: Valeur nulle intentionnelle</li>
+                    <li><strong>undefined</strong>: Variable déclarée mais sans valeur</li>
+                </ul>
+                
+                <h4>2. Structures de Contrôle</h4>
+                <p>Pour contrôler le flux d'exécution:</p>
+                <ul>
+                    <li><strong>if...else</strong>: Exécution conditionnelle</li>
+                    <li><strong>switch</strong>: Sélection multiple</li>
+                    <li><strong>for</strong>: Boucle avec compteur</li>
+                    <li><strong>while/do...while</strong>: Boucles conditionnelles</li>
+                    <li><strong>try...catch</strong>: Gestion des erreurs</li>
+                </ul>
+                
+                <h4>3. Fonctions</h4>
+                <p>Les fonctions sont des blocs de code réutilisables:</p>
+                <ul>
+                    <li><strong>Déclaration de fonction</strong>: function nomFonction() {}</li>
+                    <li><strong>Expression de fonction</strong>: const maFonction = function() {}</li>
+                    <li><strong>Fonctions fléchées</strong>: const maFonction = () => {}</li>
+                    <li><strong>Paramètres et arguments</strong>: function(param1, param2) {}</li>
+                </ul>
+                
+                <h4>4. DOM et Événements</h4>
+                <p>Manipulation du Document Object Model (DOM):</p>
+                <ul>
+                    <li><strong>Sélection d'éléments</strong>: getElementById, querySelector</li>
+                    <li><strong>Modification du contenu</strong>: innerHTML, textContent</li>
+                    <li><strong>Gestion des événements</strong>: addEventListener, removeEventListener</li>
+                    <li><strong>Manipulation des styles</strong>: style, classList</li>
+                </ul>
+            </div>
+            <div class="code-example">
+                <pre><code>// Exemple de code JavaScript moderne
 
-        <section id="javascript" class="language-section">
-            <div class="container">
-                <h2>JavaScript</h2>
-                <div class="content-wrapper">
-                    <div class="text-content">
-                        <h3>Le langage du web</h3>
-                        <p>JavaScript est un langage de programmation polyvalent qui permet d'ajouter des fonctionnalités interactives aux sites web. C'est l'un des trois piliers du développement web moderne, aux côtés de HTML et CSS.</p>
-                        
-                        <h3>Fondamentaux de JavaScript</h3>
-                        
-                        <h4>1. Variables et Types de Données</h4>
-                        <p>JavaScript propose plusieurs façons de déclarer des variables:</p>
-                        <ul>
-                            <li><strong>var</strong>: Déclaration de variable avec portée de fonction</li>
-                            <li><strong>let</strong>: Déclaration de variable avec portée de bloc</li>
-                            <li><strong>const</strong>: Constante avec portée de bloc</li>
-                        </ul>
-                        <p>Les types de données principaux sont:</p>
-                        <ul>
-                            <li><strong>String</strong>: Chaînes de caractères</li>
-                            <li><strong>Number</strong>: Nombres (entiers et décimaux)</li>
-                            <li><strong>Boolean</strong>: true ou false</li>
-                            <li><strong>Object</strong>: Collections de paires clé-valeur</li>
-                            <li><strong>Array</strong>: Collections ordonnées de valeurs</li>
-                            <li><strong>null</strong>: Valeur nulle intentionnelle</li>
-                            <li><strong>undefined</strong>: Variable déclarée mais sans valeur</li>
-                        </ul>
-                        
-                        <h4>2. Opérateurs et Expressions</h4>
-                        <p>JavaScript dispose de nombreux opérateurs:</p>
-                        <ul>
-                            <li><strong>Arithmétiques</strong>: +, -, *, /, %, **</li>
-                            <li><strong>Comparaison</strong>: ==, ===, !=, !==, >, <, >=, <=</li>
-                            <li><strong>Logiques</strong>: &&, ||, !</li>
-                            <li><strong>Affectation</strong>: =, +=, -=, *=, /=</li>
-                            <li><strong>Ternaire</strong>: condition ? valeurSiVrai : valeurSiFaux</li>
-                        </ul>
-                        
-                        <h4>3. Structures de Contrôle</h4>
-                        <p>Pour contrôler le flux d'exécution:</p>
-                        <ul>
-                            <li><strong>if...else</strong>: Exécution conditionnelle</li>
-                            <li><strong>switch</strong>: Sélection multiple</li>
-                            <li><strong>for</strong>: Boucle avec compteur</li>
-                            <li><strong>while/do...while</strong>: Boucles conditionnelles</li>
-                            <li><strong>try...catch</strong>: Gestion des erreurs</li>
-                        </ul>
-                        
-                        <h4>4. Fonctions</h4>
-                        <p>Les fonctions sont des blocs de code réutilisables:</p>
-                        <ul>
-                            <li><strong>Déclaration de fonction</strong>: function nomFonction() {}</li>
-                            <li><strong>Expression de fonction</strong>: const maFonction = function() {}</li>
-                            <li><strong>Fonctions fléchées</strong>: const maFonction = () => {}</li>
-                            <li><strong>Paramètres et arguments</strong>: function(param1, param2) {}</li>
-                            <li><strong>Valeurs de retour</strong>: return resultat;</li>
-                        </ul>
-                        
-                        <h3>JavaScript et le DOM</h3>
-                        
-                        <h4>1. Sélection d'Éléments</h4>
-                        <p>Pour interagir avec la page HTML:</p>
-                        <ul>
-                            <li><strong>getElementById</strong>: Sélectionne un élément par son ID</li>
-                            <li><strong>querySelector</strong>: Sélectionne le premier élément correspondant à un sélecteur CSS</li>
-                            <li><strong>querySelectorAll</strong>: Sélectionne tous les éléments correspondant à un sélecteur CSS</li>
-                        </ul>
-                        
-                        <h4>2. Manipulation du DOM</h4>
-                        <p>Pour modifier la page dynamiquement:</p>
-                        <ul>
-                            <li><strong>createElement</strong>: Crée un nouvel élément</li>
-                            <li><strong>appendChild/removeChild</strong>: Ajoute ou supprime des éléments enfants</li>
-                            <li><strong>innerHTML/textContent</strong>: Modifie le contenu d'un élément</li>
-                            <li><strong>setAttribute/getAttribute</strong>: Manipule les attributs</li>
-                            <li><strong>classList</strong>: Gère les classes CSS</li>
-                            <li><strong>style</strong>: Modifie les styles CSS</li>
-                        </ul>
-                        
-                        <h4>3. Événements</h4>
-                        <p>Pour réagir aux actions de l'utilisateur:</p>
-                        <ul>
-                            <li><strong>addEventListener</strong>: Attache un gestionnaire d'événements</li>
-                            <li><strong>removeEventListener</strong>: Supprime un gestionnaire d'événements</li>
-                            <li><strong>Types d'événements</strong>: click, submit, keydown, load, etc.</li>
-                            <li><strong>Objet Event</strong>: Contient des informations sur l'événement</li>
-                            <li><strong>Propagation des événements</strong>: Capture et bouillonnement</li>
-                        </ul>
-                        
-                        <h3>JavaScript Moderne</h3>
-                        
-                        <h4>1. Asynchrone</h4>
-                        <p>Pour gérer les opérations non bloquantes:</p>
-                        <ul>
-                            <li><strong>Callbacks</strong>: Fonctions passées en argument</li>
-                            <li><strong>Promises</strong>: Objets représentant une valeur future</li>
-                            <li><strong>async/await</strong>: Syntaxe pour travailler avec les promesses</li>
-                            <li><strong>fetch API</strong>: Interface moderne pour les requêtes HTTP</li>
-                        </ul>
-                        
-                        <h4>2. ES6+ et Fonctionnalités Modernes</h4>
-                        <p>JavaScript évolue constamment avec de nouvelles fonctionnalités:</p>
-                        <ul>
-                            <li><strong>Destructuring</strong>: Extraction de valeurs d'objets ou tableaux</li>
-                            <li><strong>Spread/Rest</strong>: Opérateurs ... pour manipuler des collections</li>
-                            <li><strong>Template literals</strong>: Chaînes avec interpolation `${variable}`</li>
-                            <li><strong>Modules</strong>: import/export pour organiser le code</li>
-                            <li><strong>Classes</strong>: Syntaxe orientée objet</li>
-                        </ul>
-                    </div>
-                    <div class="code-example">
-                        <pre><code>// Application JavaScript complète avec plusieurs concepts
-
-// Classes pour la gestion des tâches
-class Task {
-    constructor(id, title, description = '', completed = false) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.completed = completed;
-        this.createdAt = new Date();
-        this.completedAt = null;
-    }
-    
-    complete() {
-        this.completed = true;
-        this.completedAt = new Date();
-    }
-    
-    uncomplete() {
-        this.completed = false;
-        this.completedAt = null;
-    }
-}
-
+// Classe pour gérer une liste de tâches
 class TaskManager {
-    constructor() {
-        this.tasks = [];
-        this.nextId = 1;
-        this.loadFromLocalStorage();
-    }
-    
-    addTask(title, description = '') {
-        const task = new Task(this.nextId++, title, description);
-        this.tasks.push(task);
-        this.saveToLocalStorage();
-        return task;
-    }
-    
-    deleteTask(id) {
-        this.tasks = this.tasks.filter(task => task.id !== id);
-        this.saveToLocalStorage();
-    }
-    
-    toggleTaskStatus(id) {
-        const task = this.getTask(id);
-        if (task) {
-            task.completed ? task.uncomplete() : task.complete();
-            this.saveToLocalStorage();
-        }
-    }
-    
-    getTask(id) {
-        return this.tasks.find(task => task.id === id);
-    }
-    
-    getAllTasks() {
-        return [...this.tasks];
-    }
-    
-    getCompletedTasks() {
-        return this.tasks.filter(task => task.completed);
-    }
-    
-    getPendingTasks() {
-        return this.tasks.filter(task => !task.completed);
-    }
-    
-    saveToLocalStorage() {
-        localStorage.setItem('tasks', JSON.stringify(this.tasks));
-        localStorage.setItem('nextId', this.nextId);
-    }
-    
-    loadFromLocalStorage() {
-        const savedTasks = localStorage.getItem('tasks');
-        const savedNextId = localStorage.getItem('nextId');
-        
-        if (savedTasks) {
-            // Convertir les objets simples en instances de Task
-            const parsedTasks = JSON.parse(savedTasks);
-            this.tasks = parsedTasks.map(taskData => {
-                const task = new Task(
-                    taskData.id,
-                    taskData.title,
-                    taskData.description,
-                    taskData.completed
-                );
-                task.createdAt = new Date(taskData.createdAt);
-                task.completedAt = taskData.completedAt ? new Date(taskData.completedAt) : null;
-                return task;
-            });
-        }
-        
-        if (savedNextId) {
-            this.nextId = parseInt(savedNextId);
-        }
-    }
+constructor() {
+this.tasks = [];
+this.loadFromLocalStorage();
+this.initEventListeners();
 }
 
-// UI Controller
-class TaskUI {
-    constructor(taskManager) {
-        this.taskManager = taskManager;
-        this.taskForm = document.getElementById('task-form');
-        this.taskList = document.getElementById('task-list');
-        this.taskTitle = document.getElementById('task-title');
-        this.taskDescription = document.getElementById('task-description');
-        this.filterButtons = document.querySelectorAll('.filter-btn');
-        this.currentFilter = 'all';
-        
-        this.initEventListeners();
-        this.renderTasks();
-    }
+addTask(title, description = '') {
+const task = {
+    id: Date.now(),
+    title,
+    description,
+    completed: false,
+    createdAt: new Date()
+};
+
+this.tasks.push(task);
+this.saveToLocalStorage();
+this.renderTasks();
+
+return task;
+}
+
+toggleTask(id) {
+const task = this.tasks.find(t => t.id === id);
+if (task) {
+    task.completed = !task.completed;
+    this.saveToLocalStorage();
+    this.renderTasks();
+}
+}
+
+deleteTask(id) {
+this.tasks = this.tasks.filter(t => t.id !== id);
+this.saveToLocalStorage();
+this.renderTasks();
+}
+
+saveToLocalStorage() {
+localStorage.setItem('tasks', JSON.stringify(this.tasks));
+}
+
+loadFromLocalStorage() {
+const savedTasks = localStorage.getItem('tasks');
+if (savedTasks) {
+    this.tasks = JSON.parse(savedTasks);
+}
+}
+
+renderTasks() {
+const taskList = document.getElementById('taskList');
+taskList.innerHTML = '';
+
+
+initEventListeners() {
+const form = document.getElementById('taskForm');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
     
-    initEventListeners() {
-        // Soumission du formulaire
-        this.taskForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            this.addTask();
-        });
-        
-        // Filtrage des tâches
-        this.filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                this.filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                this.currentFilter = button.dataset.filter;
-                this.renderTasks();
-            });
-        });
-        
-        // Délégation d'événements pour les actions sur les tâches
-        this.taskList.addEventListener('click', (e) => {
-            const taskId = parseInt(e.target.closest('.task-item')?.dataset.id);
-            
-            if (e.target.classList.contains('delete-btn')) {
-                this.deleteTask(taskId);
-            } else if (e.target.classList.contains('toggle-btn') || 
-                      e.target.classList.contains('task-checkbox')) {
-                this.toggleTaskStatus(taskId);
-            }
-        });
-    }
+    const title = document.getElementById('taskTitle').value;
+    const description = document.getElementById('taskDescription').value;
     
-    addTask() {
-        const title = this.taskTitle.value.trim();
-        const description = this.taskDescription.value.trim();
-        
-        if (title) {
-            this.taskManager.addTask(title, description);
-            this.taskTitle.value = '';
-            this.taskDescription.value = '';
-            this.renderTasks();
-        }
+    if (title.trim()) {
+        this.addTask(title, description);
+        form.reset();
     }
-    
-    deleteTask(id) {
-        if (confirm('Êtes-vous sûr de vouloir supprimer cette tâche?')) {
-            this.taskManager.deleteTask(id);
-            this.renderTasks();
-        }
-    }
-    
-    toggleTaskStatus(id) {
-        this.taskManager.toggleTaskStatus(id);
-        this.renderTasks();
-    }
-    
-    renderTasks() {
-        let tasks;
+});
+}
+}
+
+// Initialiser le gestionnaire de tâches
+const taskManager = new TaskManager();</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="html" class="language-section">
+    <div class="container">
+        <h2>HTML</h2>
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h3>Structure des Pages Web</h3>
+                <p>HTML (HyperText Markup Language) est le langage de balisage standard pour créer et structurer le contenu des pages web.</p>
+                
+                <h4>1. Structure de Base</h4>
+                <p>Éléments essentiels d'une page HTML:</p>
+                <ul>
+                    <li><strong>&lt;!DOCTYPE html&gt;</strong>: Déclaration du type de document</li>
+                    <li><strong>&lt;html&gt;</strong>: Élément racine</li>
+                    <li><strong>&lt;head&gt;</strong>: Métadonnées et ressources</li>
+                    <li><strong>&lt;body&gt;</strong>: Contenu visible</li>
+                </ul>
+                
+                <h4>2. Balises de Texte</h4>
+                <p>Pour formater le texte:</p>
+                <ul>
+                    <li><strong>&lt;h1&gt; à &lt;h6&gt;</strong>: Titres</li>
+                    <li><strong>&lt;p&gt;</strong>: Paragraphes</li>
+                    <li><strong>&lt;strong&gt;</strong>: Texte important</li>
+                    <li><strong>&lt;em&gt;</strong>: Texte mis en emphase</li>
+                    <li><strong>&lt;span&gt;</strong>: Conteneur en ligne</li>
+                </ul>
+                
+                <h4>3. Liens et Médias</h4>
+                <p>Pour ajouter des ressources externes:</p>
+                <ul>
+                    <li><strong>&lt;a&gt;</strong>: Liens hypertextes</li>
+                    <li><strong>&lt;img&gt;</strong>: Images</li>
+                    <li><strong>&lt;video&gt;</strong>: Vidéos</li>
+                    <li><strong>&lt;audio&gt;</strong>: Sons</li>
+                </ul>
+                
+                <h4>4. Formulaires</h4>
+                <p>Pour collecter des données:</p>
+                <ul>
+                    <li><strong>&lt;form&gt;</strong>: Conteneur de formulaire</li>
+                    <li><strong>&lt;input&gt;</strong>: Champs de saisie</li>
+                    <li><strong>&lt;textarea&gt;</strong>: Zone de texte</li>
+                    <li><strong>&lt;select&gt;</strong>: Liste déroulante</li>
+                    <li><strong>&lt;button&gt;</strong>: Boutons</li>
+                </ul>
+                
+                <h4>5. Sémantique</h4>
+                <p>Pour une meilleure structure:</p>
+                <ul>
+                    <li><strong>&lt;header&gt;</strong>: En-tête</li>
+                    <li><strong>&lt;nav&gt;</strong>: Navigation</li>
+                    <li><strong>&lt;main&gt;</strong>: Contenu principal</li>
+                    <li><strong>&lt;article&gt;</strong>: Contenu autonome</li>
+                    <li><strong>&lt;section&gt;</strong>: Section thématique</li>
+                    <li><strong>&lt;footer&gt;</strong>: Pied de page</li>
+                </ul>
+            </div>
+            <div class="code-example">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Exemple de Page HTML&lt;/title&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#accueil"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#apropos"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+&lt;section id="accueil"&gt;
+    &lt;h1&gt;Bienvenue sur mon site&lt;/h1&gt;
+    &lt;p&gt;Un exemple de page HTML bien structurée.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="apropos"&gt;
+    &lt;h2&gt;À propos&lt;/h2&gt;
+    &lt;article&gt;
+        &lt;h3&gt;Notre Histoire&lt;/h3&gt;
+        &lt;p&gt;Découvrez notre parcours...&lt;/p&gt;
+        &lt;img src="image.jpg" alt="Notre équipe"&gt;
+    &lt;/article&gt;
+&lt;/section&gt;
+
+&lt;section id="contact"&gt;
+    &lt;h2&gt;Contactez-nous&lt;/h2&gt;
+    &lt;form action="/envoyer" method="POST"&gt;
+        &lt;div class="form-group"&gt;
+            &lt;label for="nom"&gt;Nom:&lt;/label&gt;
+            &lt;input type="text" id="nom" name="nom" required&gt;
+        &lt;/div&gt;
         
-        // Filtrer les tâches selon le filtre actif
-        switch (this.currentFilter) {
-            case 'completed':
-                tasks = this.taskManager.getCompletedTasks();
-                break;
-            case 'pending':
-                tasks = this.taskManager.getPendingTasks();
-                break;
-            default:
-                tasks = this.taskManager.getAllTasks();
-        }
+        &lt;div class="form-group"&gt;
+            &lt;label for="email"&gt;Email:&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" required&gt;
+        &lt;/div&gt;
         
-        // Vider la liste
-        this.taskList.innerHTML = '';
+        &lt;div class="form-group"&gt;
+            &lt;label for="message"&gt;Message:&lt;/label&gt;
+            &lt;textarea id="message" name="message" rows="5" required&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
         
-        // Afficher les tâches
-        if (tasks.length === 0) {
-            this.taskList.innerHTML = '<p class="empty-message">Aucune tâche à afficher</p>';
-        } else {
-            tasks.forEach(task => {
-                const taskElement = this.createTaskElement(task);
-                this.taskList.appendChild(taskElement);
-            });
-        }
-    }
+        &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+&lt;p&gt;&copy; 2023 Mon Site Web. Tous droits réservés.&lt;/p&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="css" class="language-section">
+    <div class="container">
+        <h2>CSS</h2>
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h3>Styliser vos Pages Web</h3>
+                <p>CSS (Cascading Style Sheets) permet de contrôler l'apparence et la mise en page des éléments HTML.</p>
+                
+                <h4>1. Sélecteurs</h4>
+                <p>Pour cibler les éléments:</p>
+                <ul>
+                    <li><strong>Élément</strong>: p { }</li>
+                    <li><strong>Classe</strong>: .maClasse { }</li>
+                    <li><strong>ID</strong>: #monId { }</li>
+                    <li><strong>Attribut</strong>: [type="text"] { }</li>
+                    <li><strong>Pseudo-classes</strong>: :hover, :focus, :first-child</li>
+                </ul>
+                
+                <h4>2. Propriétés de Base</h4>
+                <p>Styles fondamentaux:</p>
+                <ul>
+                    <li><strong>Couleurs</strong>: color, background-color</li>
+                    <li><strong>Typographie</strong>: font-family, font-size, font-weight</li>
+                    <li><strong>Dimensions</strong>: width, height, margin, padding</li>
+                    <li><strong>Bordures</strong>: border, border-radius</li>
+                    <li><strong>Affichage</strong>: display, visibility, opacity</li>
+                </ul>
+                
+                <h4>3. Mise en Page</h4>
+                <p>Organisation des éléments:</p>
+                <ul>
+                    <li><strong>Flexbox</strong>: display: flex</li>
+                    <li><strong>Grid</strong>: display: grid</li>
+                    <li><strong>Position</strong>: relative, absolute, fixed</li>
+                    <li><strong>Float</strong>: left, right</li>
+                </ul>
+                
+                <h4>4. Responsive Design</h4>
+                <p>Adaptation aux différents écrans:</p>
+                <ul>
+                    <li><strong>Media Queries</strong>: @media screen and (max-width: 768px) { }</li>
+                    <li><strong>Unités relatives</strong>: %, em, rem, vw, vh</li>
+                    <li><strong>Images flexibles</strong>: max-width: 100%</li>
+                    <li><strong>Grid responsif</strong>: grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))</li>
+                </ul>
+                
+                <h4>5. Animations et Transitions</h4>
+                <p>Effets dynamiques:</p>
+                <ul>
+                    <li><strong>Transitions</strong>: transition: property duration timing-function</li>
+                    <li><strong>Transformations</strong>: transform: scale(), rotate(), translate()</li>
+                    <li><strong>Animations</strong>: @keyframes et animation</li>
+                    <li><strong>Effets au survol</strong>: :hover, :active</li>
+                </ul>
+            </div>
+            <div class="code-example">
+                <pre><code>/* Exemple de styles CSS modernes */
+
+/* Variables CSS */
+:root {
+--primary-color: #2196f3;
+--secondary-color: #1976d2;
+--text-color: #333;
+--light-bg: #f5f5f5;
+--spacing: 20px;
+--border-radius: 8px;
+}
+
+/* Reset et styles de base */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Segoe UI', sans-serif;
+line-height: 1.6;
+color: var(--text-color);
+background-color: var(--light-bg);
+}
+
+/* Layout avec Grid */
+.container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: var(--spacing);
+padding: var(--spacing);
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* Composant Card avec Flexbox */
+.card {
+display: flex;
+flex-direction: column;
+background: white;
+border-radius: var(--border-radius);
+overflow: hidden;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
+}
+
+.card:hover {
+transform: translateY(-5px);
+}
+
+.card-image {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+
+.card-content {
+padding: var(--spacing);
+}
+
+/* Bouton avec animation */
+.btn {
+display: inline-block;
+padding: 10px 20px;
+background-color: var(--primary-color);
+color: white;
+border: none;
+border-radius: var(--border-radius);
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.btn:hover {
+background-color: var(--secondary-color);
+transform: scale(1.05);
+}
+
+/* Animation personnalisée */
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.fade-in {
+animation: fadeIn 0.5s ease forwards;
+}
+
+/* Media Queries pour le responsive */
+@media (max-width: 768px) {
+.container {
+grid-template-columns: 1fr;
+}
+
+.card {
+margin-bottom: var(--spacing);
+}
+}
+
+/* Navigation avec Flexbox */
+.nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: var(--spacing);
+background: white;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+display: flex;
+gap: 20px;
+}
+
+/* Formulaire stylisé */
+.form-group {
+margin-bottom: var(--spacing);
+}
+
+.form-group label {
+display: block;
+margin-bottom: 5px;
+font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: var(--border-radius);
+font-family: inherit;
+transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+border-color: var(--primary-color);
+outline: none;
+}
+
+/* Grid avancé pour la galerie */
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+gap: 20px;
+padding: 20px;
+}
+
+.gallery-item {
+position: relative;
+overflow: hidden;
+border-radius: var(--border-radius);
+}
+
+.gallery-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+transform: scale(1.1);
+}
+
+/* Utilitaires */
+.text-center { text-align: center; }
+.mt-1 { margin-top: var(--spacing); }
+.mb-1 { margin-bottom: var(--spacing); }
+.p-1 { padding: var(--spacing); }
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+:root {
+--text-color: #f5f5f5;
+--light-bg: #333;
+}
+
+body {
+background-color: #1a1a1a;
+}
+
+.card,
+.nav {
+background: #2d2d2d;
+}
+}</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<section id="contact" class="contact-section">
+<div class="container">
+    <h2>Contact</h2>
+    <p>Vous avez des questions? N'hésitez pas à nous contacter!</p>
     
-    createTaskElement(task) {
-        const taskElement = document.createElement('div');
-        taskElement.className = `task-item ${task.completed ?
+    <form class="contact-form">
+        <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn">Envoyer</button>
+    </form>
+</div>
+</section>
+
+<footer>
+<div class="container">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <h2>TrainerDev</h2>
+            <p>Votre plateforme d'apprentissage</p>
+        </div>
+        
+        <div class="footer-links">
+            <h3>Liens rapides</h3>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#learn">Apprendre</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-social">
+            <h3>Suivez-nous</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2023 TrainerDev. Tous droits réservés.</p>
+    </div>
+</div>
+</footer>
+</body>
+</html>
