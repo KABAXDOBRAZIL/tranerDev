@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainerDev - Learn Programming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>TrainerDev</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Accueil</a>
+                <a href="#learn">Apprendre</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue sur <span>TrainerDev</span></h1>
+            <p>Votre plateforme d'apprentissage pour devenir un développeur compétent</p>
+            <a href="#learn" class="btn">Commencer à apprendre</a>
+        </div>
+    </section>
+
+    <section id="learn" class="learn-section">
+        <h2>Apprendre</h2>
+        <p>Choisissez un langage pour commencer votre parcours d'apprentissage</p>
+        
+        <div class="languages-grid">
+            <div class="language-card" data-lang="lua-fivem">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <i class="fas fa-code"></i>
+                        <h3>Lua (FiveM)</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Développez des scripts pour FiveM avec Lua</p>
+                        <a href="#lua-fivem" class="btn-small">Explorer</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="language-card" data-lang="lua-roblox">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Lua (Roblox)</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Créez des jeux sur Roblox avec Lua</p>
+                        <a href="#lua-roblox" class="btn-small">Explorer</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="language-card" data-lang="javascript">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Développez des applications web interactives</p>
+                        <a href="#javascript" class="btn-small">Explorer</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="language-card" data-lang="html">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Créez la structure de vos pages web</p>
+                        <a href="#html" class="btn-small">Explorer</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="language-card" data-lang="css">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Stylisez vos pages web avec élégance</p>
+                        <a href="#css" class="btn-small">Explorer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="language-content">
+        <section id="lua-fivem" class="language-section">
+            <div class="container">
+                <h2>Lua pour FiveM</h2>
+                <div class="content-wrapper">
+                    <div class="text-content">
+                        <h3>Qu'est-ce que FiveM?</h3>
+                        <p>FiveM est une plateforme de modification pour GTA V qui permet aux joueurs de rejoindre des serveurs personnalisés avec des scripts Lua. Cette plateforme offre aux développeurs la possibilité de créer des expériences uniques en utilisant les ressources du jeu.</p>
+                        
+                        <h3>Introduction à Lua</h3>
+                        <p>Lua est un langage de script léger et puissant, parfait pour l'intégration dans des applications comme FiveM. Avant de plonger dans le développement FiveM, il est essentiel de comprendre les bases de Lua:</p>
+                        
+                        <h4>1. Variables et Types de Données</h4>
+                        <p>En Lua, les variables sont dynamiquement typées. Les types principaux sont:</p>
+                        <ul>
+                            <li><strong>nil</strong>: Représente l'absence de valeur</li>
+                            <li><strong>boolean</strong>: true ou false</li>
+                            <li><strong>number</strong>: Représente les nombres entiers et à virgule flottante</li>
+                            <li><strong>string</strong>: Séquences de caractères</li>
+                            <li><strong>function</strong>: Fonctions</li>
+                            <li><strong>table</strong>: Structure de données polyvalente (peut être utilisée comme tableaux ou dictionnaires)</li>
+                        </ul>
+                        
+                        <h4>2. Structures de Contrôle</h4>
+                        <p>Lua offre plusieurs structures de contrôle pour gérer le flux d'exécution:</p>
+                        <ul>
+                            <li><strong>if-then-else</strong>: Pour les conditions</li>
+                            <li><strong>while</strong>: Boucles tant qu'une condition est vraie</li>
+                            <li><strong>for</strong>: Boucles numériques ou itératives</li>
+                            <li><strong>repeat-until</strong>: Boucles qui s'exécutent au moins une fois</li>
+                        </ul>
+                        
+                        <h3>Développement FiveM avec Lua</h3>
+                        
+                        <h4>1. Structure d'une Ressource FiveM</h4>
+                        <p>Une ressource FiveM est composée de plusieurs fichiers:</p>
+                        <ul>
+                            <li><strong>fxmanifest.lua</strong>: Fichier de configuration qui définit les métadonnées et les dépendances</li>
+                            <li><strong>client.lua</strong>: Scripts exécutés côté client</li>
+                            <li><strong>server.lua</strong>: Scripts exécutés côté serveur</li>
+                            <li><strong>shared.lua</strong>: Code partagé entre client et serveur</li>
+                            <li><strong>ui/</strong>: Dossier contenant les fichiers d'interface utilisateur (HTML, CSS, JS)</li>
+                        </ul>
+                        
+                        <h4>2. Communication Client-Serveur</h4>
+                        <p>FiveM utilise un système d'événements pour la communication entre client et serveur:</p>
+                        <ul>
+                            <li><strong>TriggerEvent</strong>: Déclenche un événement local</li>
+                            <li><strong>TriggerServerEvent</strong>: Déclenche un événement sur le serveur</li>
+                            <li><strong>TriggerClientEvent</strong>: Déclenche un événement sur un client spécifique</li>
+                        </ul>
+                        
+                        <h4>3. Natives GTA V</h4>
+                        <p>Les natives sont des fonctions intégrées qui permettent d'interagir avec le monde de GTA V. Elles vous permettent de:</p>
+                        <ul>
+                            <li>Manipuler des véhicules, personnages et objets</li>
+                            <li>Contrôler la météo et l'heure</li>
+                            <li>Créer des blips sur la carte</li>
+                            <li>Gérer les animations et effets</li>
+                        </ul>
+                        
+                        <h4>4. Création d'Interfaces Utilisateur</h4>
+                        <p>FiveM permet de créer des interfaces utilisateur personnalisées avec NUI (Natural UI):</p>
+                        <ul>
+                            <li>Utilisation de HTML, CSS et JavaScript</li>
+                            <li>Communication entre l'interface et le script Lua</li>
+                            <li>Création de menus, inventaires et tableaux de bord</li>
+                        </ul>
+                    </div>
+                    <div class="code-example">
+                        <pre><code>-- Exemple de script FiveM complet (côté client)
+
+-- Variables locales
+local playerLoaded = false
+local playerData = {}
+local isPlayerInVehicle = false
+
+-- Fonction pour initialiser le joueur
+function InitializePlayer()
+    local playerId = PlayerId()
+    local playerPed = PlayerPedId()
+    
+    playerData = {
+        id = playerId,
+        serverId = GetPlayerServerId(playerId),
+        name = GetPlayerName(playerId),
+        position = GetEntityCoords(playerPed)
+    }
+    
+    print("Joueur initialisé: " .. playerData.name)
+    TriggerServerEvent('playerInitialized', playerData)
+    playerLoaded = true
+end
+
+-- Thread principal
+Citizen.CreateThread(function()
+    while true do
+        if not playerLoaded then
+            InitializePlayer()
+        end
+        
+        local playerPed = PlayerPedId()
+        local position = GetEntityCoords(playerPed)
+        
+        -- Vérifier si le joueur est dans un véhicule
+        if IsPedInAnyVehicle(playerPed, false) then
+            if not isPlayerInVehicle then
+                isPlayerInVehicle = true
+                local vehicle = GetVehiclePedIsIn(playerPed, false)
+                local vehicleModel = GetEntityModel(vehicle)
+                local vehicleName = GetDisplayNameFromVehicleModel(vehicleModel)
+                
+                TriggerEvent('playerEnteredVehicle', vehicleName)
+                ShowNotification("Vous êtes entré dans un " .. vehicleName)
+            end
+        else
+            if isPlayerInVehicle then
+                isPlayerInVehicle = false
+                TriggerEvent('playerExitedVehicle')
+                ShowNotification("Vous êtes sorti du véhicule")
+            end
+        end
+        
+        -- Mettre à jour la position du joueur
+        if playerLoaded and #(playerData.position - position) > 5.0 then
+            playerData.position = position
+            TriggerServerEvent('updatePlayerPosition', position)
+        end
+        
+        Citizen.Wait(500)
+    end
+end)
+
+-- Fonction utilitaire pour afficher une notification
+function ShowNotification(message)
+    SetNotificationTextEntry("STRING")
+    AddTextComponentString(message)
+    DrawNotification(false, false)
+end
+
+-- Gestionnaire d'événements
+RegisterNetEvent('serverMessage')
+AddEventHandler('serverMessage', function(message)
+    ShowNotification(message)
+end)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="lua-roblox" class="language-section">
+            <div class="container">
+                <h2>Lua pour Roblox</h2>
+                <div class="content-wrapper">
+                    <div class="text-content">
+                        <h3>Développement sur Roblox</h3>
+                        <p>Roblox Studio est un environnement de développement qui utilise Lua pour créer des jeux et des expériences interactives sur la plateforme Roblox. Cette plateforme permet aux développeurs de tous niveaux de créer des mondes virtuels complexes.</p>
+                        
+                        <h3>Bases de Lua pour Roblox</h3>
+                        
+                        <h4>1. Environnement Roblox</h4>
+                        <p>Roblox utilise une version modifiée de Lua appelée Luau, qui offre des fonctionnalités supplémentaires comme le typage optionnel. Voici les éléments fondamentaux:</p>
+                        <ul>
+                            <li><strong>Instances</strong>: Tous les objets dans Roblox sont des instances</li>
+                            <li><strong>Properties</strong>: Attributs qui définissent l'état d'une instance</li>
+                            <li><strong>Methods</strong>: Fonctions associées à une instance</li>
+                            <li><strong>Events</strong>: Signaux déclenchés lorsque quelque chose se produit</li>
+                        </ul>
+                        
+                        <h4>2. Types de Scripts</h4>
+                        <p>Roblox utilise différents types de scripts pour différentes fonctionnalités:</p>
+                        <ul>
+                            <li><strong>Script</strong>: S'exécute sur le serveur</li>
+                            <li><strong>LocalScript</strong>: S'exécute sur le client</li>
+                            <li><strong>ModuleScript</strong>: Contient du code réutilisable</li>
+                        </ul>
+                        
+                        <h4>3. Hiérarchie des Objets</h4>
+                        <p>Roblox organise les objets dans une structure arborescente:</p>
+                        <ul>
+                            <li><strong>Workspace</strong>: Contient tous les objets visibles dans le jeu</li>
+                            <li><strong>Players</strong>: Contient tous les joueurs connectés</li>
+                            <li><strong>ReplicatedStorage</strong>: Stockage partagé entre client et serveur</li>
+                            <li><strong>ServerStorage</strong>: Stockage accessible uniquement par le serveur</li>
+                        </ul>
+                        
+                        <h3>Concepts Avancés</h3>
+                        
+                        <h4>1. Gestion des Événements</h4>
+                        <p>Les événements sont essentiels pour créer des jeux interactifs:</p>
+                        <ul>
+                            <li><strong>Connect</strong>: Attache une fonction à un événement</li>
+                            <li><strong>FireServer/FireClient</strong>: Déclenche des événements entre client et serveur</li>
+                            <li><strong>BindableEvents</strong>: Pour la communication locale</li>
+                        </ul>
+                        
+                        <h4>2. Interface Utilisateur</h4>
+                        <p>Roblox offre un système complet pour créer des interfaces utilisateur:</p>
+                        <ul>
+                            <li><strong>ScreenGui</strong>: Conteneur principal pour les éléments d'interface</li>
+                            <li><strong>Frame</strong>: Conteneur rectangulaire</li>
+                            <li><strong>TextLabel/TextButton</strong>: Éléments de texte et boutons</li>
+                            <li><strong>UIListLayout/UIGridLayout</strong>: Organisation automatique des éléments</li>
+                        </ul>
+                        
+                        <h4>3. Physique et Animations</h4>
+                        <p>Roblox dispose d'un moteur physique puissant:</p>
+                        <ul>
+                            <li><strong>Constraints</strong>: Joints, ressorts et moteurs</li>
+                            <li><strong>Animations</strong>: Système d'animation pour les personnages</li>
+                            <li><strong>Tweening</strong>: Animations fluides pour les objets et l'interface</li>
+                        </ul>
+                        
+                        <h4>4. Économie et Monétisation</h4>
+                        <p>Roblox permet aux développeurs de monétiser leurs jeux:</p>
+                        <ul>
+                            <li><strong>Developer Products</strong>: Achats uniques</li>
+                            <li><strong>Game Passes</strong>: Fonctionnalités permanentes</li>
+                            <li><strong>Premium Payouts</strong>: Revenus basés sur l'engagement des utilisateurs Premium</li>
+                        </ul>
+                    </div>
+                    <div class="code-example">
+                        <pre><code>-- Exemple de jeu simple sur Roblox
+
+-- Script serveur (Script)
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+-- Créer un événement RemoteEvent pour la communication
+local ScoreEvent = Instance.new("RemoteEvent")
+ScoreEvent.Name = "ScoreUpdate"
+ScoreEvent.Parent = ReplicatedStorage
+
+-- Table pour stocker les scores des joueurs
+local playerScores = {}
+
+-- Fonction pour donner des points à un joueur
+local function awardPoints(player, points)
+    -- Initialiser le score si nécessaire
+    if not playerScores[player.UserId] then
+        playerScores[player.UserId] = 0
+    end
+    
+    -- Ajouter les points
+    playerScores[player.UserId] = playerScores[player.UserId] + points
+    
+    -- Informer le client du nouveau score
+    ScoreEvent:FireClient(player, playerScores[player.UserId])
+    
+    print(player.Name .. " a maintenant " .. playerScores[player.UserId] .. " points")
+end
+
+-- Créer une partie collectible
+local function createCollectible()
+    local part = Instance.new("Part")
+    part.Name = "Collectible"
+    part.BrickColor = BrickColor.new("Bright yellow")
+    part.Shape = Enum.PartType.Ball
+    part.Size = Vector3.new(2, 2, 2)
+    part.Position = Vector3.new(math.random(-50, 50), 5, math.random(-50, 50))
+    part.Anchored = true
+    part.CanCollide = false
+    
+    -- Ajouter un effet de brillance
+    local sparkles = Instance.new("Sparkles")
+    sparkles.Parent = part
+    
+    -- Créer un script pour détecter les joueurs
+    local script = Instance.new("Script")
+    script.Parent = part
+    
+    script.Source = [[
+    local part = script.Parent
+    local debounce = false
+    
+    part.Touched:Connect(function(hit)
+        local player = game.Players:GetPlayerFromCharacter(hit.Parent)
+        
+        if player and not debounce then
+            debounce = true
+            
+            -- Effet visuel
+            part.Transparency = 1
+            part.Sparkles.Enabled = false
+            
+            -- Informer le serveur
+            game.ReplicatedStorage.CollectibleFound:FireServer(part)
+            
+            -- Attendre avant de disparaître
+            wait(0.5)
+            part:Destroy()
+        end
+    end)
+    ]]
+    
+    part.Parent = workspace
+    return part
+end
+
+-- Créer un événement pour les collectibles
+local collectibleEvent = Instance.new("RemoteEvent")
+collectibleEvent.Name = "CollectibleFound"
+collectibleEvent.Parent = ReplicatedStorage
+
+-- Écouter l'événement
+collectibleEvent.OnServerEvent:Connect(function(player, collectible)
+    awardPoints(player, 10)
+    
+    -- Créer un nouveau collectible après un délai
+    wait(3)
+    createCollectible()
+end)
+
+-- Quand un joueur rejoint
+Players.PlayerAdded:Connect(function(player)
+    print(player.Name .. " a rejoint le jeu!")
+    
+    -- Initialiser le score
+    playerScores[player.UserId] = 0
+    
+    -- Créer un leaderstats pour afficher le score
+    local leaderstats = Instance.new("Folder")
+    leaderstats.Name = "leaderstats"
+    leaderstats.Parent = player
+    
+    local score = Instance.new("IntValue")
+    score.Name = "Score"
+    score.Value = 0
+    score.Parent = leaderstats
+    
+    -- Mettre à jour le leaderstats quand le score change
+    ScoreEvent.OnServerEvent:Connect(function(player, newScore)
+        score.Value = newScore
+    end)
+    
+    -- Créer quelques collectibles au démarrage
+    for i = 1, 5 do
+        createCollectible()
+    end
+end)
+
+-- Quand un joueur quitte
+Players.PlayerRemoving:Connect(function(player)
+    print(player.Name .. " a quitté le jeu!")
+    playerScores[player.UserId] = nil
+end)
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="javascript" class="language-section">
+            <div class="container">
+                <h2>JavaScript</h2>
+                <div class="content-wrapper">
+                    <div class="text-content">
+                        <h3>Le langage du web</h3>
+                        <p>JavaScript est un langage de programmation polyvalent qui permet d'ajouter des fonctionnalités interactives aux sites web. C'est l'un des trois piliers du développement web moderne, aux côtés de HTML et CSS.</p>
+                        
+                        <h3>Fondamentaux de JavaScript</h3>
+                        
+                        <h4>1. Variables et Types de Données</h4>
+                        <p>JavaScript propose plusieurs façons de déclarer des variables:</p>
+                        <ul>
+                            <li><strong>var</strong>: Déclaration de variable avec portée de fonction</li>
+                            <li><strong>let</strong>: Déclaration de variable avec portée de bloc</li>
+                            <li><strong>const</strong>: Constante avec portée de bloc</li>
+                        </ul>
+                        <p>Les types de données principaux sont:</p>
+                        <ul>
+                            <li><strong>String</strong>: Chaînes de caractères</li>
+                            <li><strong>Number</strong>: Nombres (entiers et décimaux)</li>
+                            <li><strong>Boolean</strong>: true ou false</li>
+                            <li><strong>Object</strong>: Collections de paires clé-valeur</li>
+                            <li><strong>Array</strong>: Collections ordonnées de valeurs</li>
+                            <li><strong>null</strong>: Valeur nulle intentionnelle</li>
+                            <li><strong>undefined</strong>: Variable déclarée mais sans valeur</li>
+                        </ul>
+                        
+                        <h4>2. Opérateurs et Expressions</h4>
+                        <p>JavaScript dispose de nombreux opérateurs:</p>
+                        <ul>
+                            <li><strong>Arithmétiques</strong>: +, -, *, /, %, **</li>
+                            <li><strong>Comparaison</strong>: ==, ===, !=, !==, >, <, >=, <=</li>
+                            <li><strong>Logiques</strong>: &&, ||, !</li>
+                            <li><strong>Affectation</strong>: =, +=, -=, *=, /=</li>
+                            <li><strong>Ternaire</strong>: condition ? valeurSiVrai : valeurSiFaux</li>
+                        </ul>
+                        
+                        <h4>3. Structures de Contrôle</h4>
+                        <p>Pour contrôler le flux d'exécution:</p>
+                        <ul>
+                            <li><strong>if...else</strong>: Exécution conditionnelle</li>
+                            <li><strong>switch</strong>: Sélection multiple</li>
+                            <li><strong>for</strong>: Boucle avec compteur</li>
+                            <li><strong>while/do...while</strong>: Boucles conditionnelles</li>
+                            <li><strong>try...catch</strong>: Gestion des erreurs</li>
+                        </ul>
+                        
+                        <h4>4. Fonctions</h4>
+                        <p>Les fonctions sont des blocs de code réutilisables:</p>
+                        <ul>
+                            <li><strong>Déclaration de fonction</strong>: function nomFonction() {}</li>
+                            <li><strong>Expression de fonction</strong>: const maFonction = function() {}</li>
+                            <li><strong>Fonctions fléchées</strong>: const maFonction = () => {}</li>
+                            <li><strong>Paramètres et arguments</strong>: function(param1, param2) {}</li>
+                            <li><strong>Valeurs de retour</strong>: return resultat;</li>
+                        </ul>
+                        
+                        <h3>JavaScript et le DOM</h3>
+                        
+                        <h4>1. Sélection d'Éléments</h4>
+                        <p>Pour interagir avec la page HTML:</p>
+                        <ul>
+                            <li><strong>getElementById</strong>: Sélectionne un élément par son ID</li>
+                            <li><strong>querySelector</strong>: Sélectionne le premier élément correspondant à un sélecteur CSS</li>
+                            <li><strong>querySelectorAll</strong>: Sélectionne tous les éléments correspondant à un sélecteur CSS</li>
+                        </ul>
+                        
+                        <h4>2. Manipulation du DOM</h4>
+                        <p>Pour modifier la page dynamiquement:</p>
+                        <ul>
+                            <li><strong>createElement</strong>: Crée un nouvel élément</li>
+                            <li><strong>appendChild/removeChild</strong>: Ajoute ou supprime des éléments enfants</li>
+                            <li><strong>innerHTML/textContent</strong>: Modifie le contenu d'un élément</li>
+                            <li><strong>setAttribute/getAttribute</strong>: Manipule les attributs</li>
+                            <li><strong>classList</strong>: Gère les classes CSS</li>
+                            <li><strong>style</strong>: Modifie les styles CSS</li>
+                        </ul>
+                        
+                        <h4>3. Événements</h4>
+                        <p>Pour réagir aux actions de l'utilisateur:</p>
+                        <ul>
+                            <li><strong>addEventListener</strong>: Attache un gestionnaire d'événements</li>
+                            <li><strong>removeEventListener</strong>: Supprime un gestionnaire d'événements</li>
+                            <li><strong>Types d'événements</strong>: click, submit, keydown, load, etc.</li>
+                            <li><strong>Objet Event</strong>: Contient des informations sur l'événement</li>
+                            <li><strong>Propagation des événements</strong>: Capture et bouillonnement</li>
+                        </ul>
+                        
+                        <h3>JavaScript Moderne</h3>
+                        
+                        <h4>1. Asynchrone</h4>
+                        <p>Pour gérer les opérations non bloquantes:</p>
+                        <ul>
+                            <li><strong>Callbacks</strong>: Fonctions passées en argument</li>
+                            <li><strong>Promises</strong>: Objets représentant une valeur future</li>
+                            <li><strong>async/await</strong>: Syntaxe pour travailler avec les promesses</li>
+                            <li><strong>fetch API</strong>: Interface moderne pour les requêtes HTTP</li>
+                        </ul>
+                        
+                        <h4>2. ES6+ et Fonctionnalités Modernes</h4>
+                        <p>JavaScript évolue constamment avec de nouvelles fonctionnalités:</p>
+                        <ul>
+                            <li><strong>Destructuring</strong>: Extraction de valeurs d'objets ou tableaux</li>
+                            <li><strong>Spread/Rest</strong>: Opérateurs ... pour manipuler des collections</li>
+                            <li><strong>Template literals</strong>: Chaînes avec interpolation `${variable}`</li>
+                            <li><strong>Modules</strong>: import/export pour organiser le code</li>
+                            <li><strong>Classes</strong>: Syntaxe orientée objet</li>
+                        </ul>
+                    </div>
+                    <div class="code-example">
+                        <pre><code>// Application JavaScript complète avec plusieurs concepts
+
+// Classes pour la gestion des tâches
+class Task {
+    constructor(id, title, description = '', completed = false) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.completed = completed;
+        this.createdAt = new Date();
+        this.completedAt = null;
+    }
+    
+    complete() {
+        this.completed = true;
+        this.completedAt = new Date();
+    }
+    
+    uncomplete() {
+        this.completed = false;
+        this.completedAt = null;
+    }
+}
+
+class TaskManager {
+    constructor() {
+        this.tasks = [];
+        this.nextId = 1;
+        this.loadFromLocalStorage();
+    }
+    
+    addTask(title, description = '') {
+        const task = new Task(this.nextId++, title, description);
+        this.tasks.push(task);
+        this.saveToLocalStorage();
+        return task;
+    }
+    
+    deleteTask(id) {
+        this.tasks = this.tasks.filter(task => task.id !== id);
+        this.saveToLocalStorage();
+    }
+    
+    toggleTaskStatus(id) {
+        const task = this.getTask(id);
+        if (task) {
+            task.completed ? task.uncomplete() : task.complete();
+            this.saveToLocalStorage();
+        }
+    }
+    
+    getTask(id) {
+        return this.tasks.find(task => task.id === id);
+    }
+    
+    getAllTasks() {
+        return [...this.tasks];
+    }
+    
+    getCompletedTasks() {
+        return this.tasks.filter(task => task.completed);
+    }
+    
+    getPendingTasks() {
+        return this.tasks.filter(task => !task.completed);
+    }
+    
+    saveToLocalStorage() {
+        localStorage.setItem('tasks', JSON.stringify(this.tasks));
+        localStorage.setItem('nextId', this.nextId);
+    }
+    
+    loadFromLocalStorage() {
+        const savedTasks = localStorage.getItem('tasks');
+        const savedNextId = localStorage.getItem('nextId');
+        
+        if (savedTasks) {
+            // Convertir les objets simples en instances de Task
+            const parsedTasks = JSON.parse(savedTasks);
+            this.tasks = parsedTasks.map(taskData => {
+                const task = new Task(
+                    taskData.id,
+                    taskData.title,
+                    taskData.description,
+                    taskData.completed
+                );
+                task.createdAt = new Date(taskData.createdAt);
+                task.completedAt = taskData.completedAt ? new Date(taskData.completedAt) : null;
+                return task;
+            });
+        }
+        
+        if (savedNextId) {
+            this.nextId = parseInt(savedNextId);
+        }
+    }
+}
+
+// UI Controller
+class TaskUI {
+    constructor(taskManager) {
+        this.taskManager = taskManager;
+        this.taskForm = document.getElementById('task-form');
+        this.taskList = document.getElementById('task-list');
+        this.taskTitle = document.getElementById('task-title');
+        this.taskDescription = document.getElementById('task-description');
+        this.filterButtons = document.querySelectorAll('.filter-btn');
+        this.currentFilter = 'all';
+        
+        this.initEventListeners();
+        this.renderTasks();
+    }
+    
+    initEventListeners() {
+        // Soumission du formulaire
+        this.taskForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            this.addTask();
+        });
+        
+        // Filtrage des tâches
+        this.filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                this.filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                this.currentFilter = button.dataset.filter;
+                this.renderTasks();
+            });
+        });
+        
+        // Délégation d'événements pour les actions sur les tâches
+        this.taskList.addEventListener('click', (e) => {
+            const taskId = parseInt(e.target.closest('.task-item')?.dataset.id);
+            
+            if (e.target.classList.contains('delete-btn')) {
+                this.deleteTask(taskId);
+            } else if (e.target.classList.contains('toggle-btn') || 
+                      e.target.classList.contains('task-checkbox')) {
+                this.toggleTaskStatus(taskId);
+            }
+        });
+    }
+    
+    addTask() {
+        const title = this.taskTitle.value.trim();
+        const description = this.taskDescription.value.trim();
+        
+        if (title) {
+            this.taskManager.addTask(title, description);
+            this.taskTitle.value = '';
+            this.taskDescription.value = '';
+            this.renderTasks();
+        }
+    }
+    
+    deleteTask(id) {
+        if (confirm('Êtes-vous sûr de vouloir supprimer cette tâche?')) {
+            this.taskManager.deleteTask(id);
+            this.renderTasks();
+        }
+    }
+    
+    toggleTaskStatus(id) {
+        this.taskManager.toggleTaskStatus(id);
+        this.renderTasks();
+    }
+    
+    renderTasks() {
+        let tasks;
+        
+        // Filtrer les tâches selon le filtre actif
+        switch (this.currentFilter) {
+            case 'completed':
+                tasks = this.taskManager.getCompletedTasks();
+                break;
+            case 'pending':
+                tasks = this.taskManager.getPendingTasks();
+                break;
+            default:
+                tasks = this.taskManager.getAllTasks();
+        }
+        
+        // Vider la liste
+        this.taskList.innerHTML = '';
+        
+        // Afficher les tâches
+        if (tasks.length === 0) {
+            this.taskList.innerHTML = '<p class="empty-message">Aucune tâche à afficher</p>';
+        } else {
+            tasks.forEach(task => {
+                const taskElement = this.createTaskElement(task);
+                this.taskList.appendChild(taskElement);
+            });
+        }
+    }
+    
+    createTaskElement(task) {
+        const taskElement = document.createElement('div');
+        taskElement.className = `task-item ${task.completed ?
